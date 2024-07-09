@@ -1,0 +1,32 @@
+<!doctype html>
+	<html lang="pt-br">
+
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Exercício 03</title>
+	 	</head>
+		<body>
+		
+			<h1>Olá Mundo</h1>
+			<h2>Exercício 03</h2>
+			<p id="res">O resultado aparecerá aqui!</p>
+			<button onclick="clicar(-10, 10)">Consultar</button>
+
+		</body>
+			<script type="text/javascript">
+
+				const res = window.document.getElementById('res')
+				function clicar(a, b) {
+					if (a == b){
+						let c = a += b
+						res.innerHTML = `O resultado da soma é ${c}`
+					}else{
+						let c = a *= b
+						res.innerHTML = `O resultado da multiplicação é ${c}`
+					}
+				}
+
+			</script>
+		<footer>₢ Weslley Nascimento </footer>
+	</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width-device-width, initial-scale-1">
+      <title>Exercício 06</title>
+    </head>
+    <body>
+      <h1>Olá Mundo!</h1>
+      <h2>Exercicio 06</h2>
+      <p id="res">O resultado aparecerá aqui</p>
+      <button onclick="clicar()">Consultar</button>
+    <script>
+      //Selecionamos o elemento HTML que será substituído.
+      const res = document.querySelector('p#res')
+
+      function clicar() {
+        
+        //O usuário fará a entrada de dados.
+        let valor = Number(prompt("Digite algum valor: "));
+
+        //Calculando o valor do ajuste com base no valor de entrada.
+        const ajuste = (valor * 0.5)
+
+        //Calculando o reajuste com o ajuste solicitado.
+        const reajuste = (valor + ajuste)
+
+        //Escrevendo no HTML o resultado do reajuste fazendo uma comparação de antes e depois.
+        res.innerHTML = `O valor antes do reajuste era de ${valor}, e agora com o acréssimo de 5% passa a ser ${reajuste}.`
+
+      }
+    </script>
+  </body>
+</html>

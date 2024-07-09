@@ -1,0 +1,43 @@
+<!doctype html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Exercício 07</title>
+	 	</head>
+		<body>	
+			<h1>Olá Mundo</h1>
+			<h2>Exercício 07</h2>
+			<p id="res">O resultado aparecerá aqui!</p>
+			<p id="res2"></p>
+			<button onclick="clicar()">Consultar</button>
+		</body>
+
+			<script type="text/javascript">
+
+			const res = document.getElementById('res')
+
+			function clicar() {
+
+				//Duas notas são definidas e o programa deve definir se são verdadeiras ou falsas.
+				const nota1 = Number(prompt('Digite o primeiro valor de 1 à 10!'))
+				const nota2 = Number(prompt('Digite o segundo valor de 1 à 10'))
+
+				//Media calculada só para enfeite.
+				media = (nota1 + nota2) / 2
+
+				//Definindo a veracidade da primeira afirmação.
+				let resultado1 = nota1 > 7 ? 'verdadeiro' : 'falso' 
+
+				//Definindo a veracidade da segunda afirmação.
+				let resultado2 = nota2 > 7 ? 'verdadeiro' : 'falso'
+
+				//Imprimindo o resultado na página web.
+				res.innerHTML = `É ${resultado1} a primeira afirmação `
+
+				//Imprimindo o resultado na página web.
+				res2.innerHTML = `É ${resultado1} a segunda afirmação `
+			}
+			</script>
+		<footer>₢ Weslley Nascimento </footer>
+	</html>

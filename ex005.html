@@ -1,0 +1,34 @@
+<!doctype html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Exercício 05</title>
+	 	</head>
+		<body>
+		
+			<h1>Olá Mundo</h1>
+			<h2>Exercício 05</h2>
+			<p id="res">O resultado aparecerá aqui!</p>
+
+			<button onclick="clicar(1412, 8600)">Consultar</button>
+
+		</body>
+			<script type="text/javascript">
+
+			const res = document.getElementById('res')
+
+				function 
+				clicar(salario, sal_User) {
+
+					let calc = (sal_User / salario)
+
+					const total = calc.toFixed(2);
+					const formatado = sal_User.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+
+					res.innerHTML = `Este usuário ganha ${formatado} reais, logo são ${total} salários`	
+				}
+
+			</script>
+		<footer>₢ Weslley Nascimento </footer>
+	</html>

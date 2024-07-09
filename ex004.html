@@ -1,0 +1,38 @@
+<!doctype html>
+	<html lang="pt-br">
+
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Exercício 04</title>
+	 	</head>
+		<body>
+		
+			<h1>Olá Mundo</h1>
+			<h2>Exercício 04</h2>
+			<p id="res">O resultado aparecerá aqui!</p>
+			<p id="res2"></p>
+			<p id="res3"></p>
+			<button onclick="clicar(-10, 10)">Consultar</button>
+
+		</body>
+			<script type="text/javascript">
+				const res = window.document.querySelector('p#res')
+				const res2 = window.document.querySelector('p#res2')
+				const res3 = window.document.querySelector('p#res3')
+				function clicar(a, b) {
+
+					res.innerHTML = `Os antecessores de ${a} e ${b} são:`
+					a--;
+					b--;
+					res2.innerHTML = `${a} e ${b}`
+					a++
+					a++
+					b++
+					b++
+					res3.innerHTML = `já os sucessores serão ${a} e ${b}!`	
+				}
+
+			</script>
+		<footer>₢ Weslley Nascimento </footer>
+	</html>

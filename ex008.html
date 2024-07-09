@@ -1,0 +1,31 @@
+<!doctype html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Exercício 08</title>
+	 	</head>
+		<body>	
+			<h1>Olá Mundo</h1>
+			<h2>Exercício 08</h2>
+			<p id="res">O resultado aparecerá aqui!</p>
+			<button onclick="clicar(1, 3, 2)">Consultar</button>
+		</body>
+
+			<script type="text/javascript">
+
+				const res = document.querySelector('p#res')
+				function clicar(a, b, c) {
+				 	const meuArray = [c, b, a]
+
+				 	meuArray.push(5);
+				 	meuArray.sort()
+
+
+				 	res.innerHTML = meuArray
+
+				 } 
+
+			</script>
+		<footer>₢ Weslley Nascimento </footer>
+	</html>

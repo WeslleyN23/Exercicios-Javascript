@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 09</title>
+</head>
+
+<body>	
+    <h1>Olá Mundo</h1>
+    <h2>Exercício 08</h2>
+
+    <form>
+        
+            <label for="alt">Digite a sua altura:</label><br>
+            <input type="number" id="alt" name="alt"><br>
+            <label for="pes">Digite o seu peso:</label><br>
+            <input type="number" id="pes" name="pes"><br><br>
+            <p id="res">O resultado aparecerá aqui!</p>
+            <p><button onclick="clicar()">Consultar</button></p>
+          
+    </form>
+    
+</body>
+
+    <script type="text/javascript">
+
+        // Pegamos a div onde sai o resultado calculado
+        const res = document.querySelector('p#res')
+
+        // Função para calcular o IMC
+        function clicar() {
+
+            // Previne o evento padrão do formulário
+            event.preventDefault();
+
+             // Pegamos os valores de entrada altura e peso.
+            const inputAltura = document.querySelector('input#alt').value;
+            const inputPeso = document.querySelector('input#pes').value;
+
+             // Com os valores de entrada obtidos, calculamos para obter o resultado do IMC ( Peso dividido por altura² )
+            const imcTotal = (inputPeso / (inputAltura*inputAltura)).toFixed(2);
+
+             // Se o IMC do usuário for menor que 18,49 execute essa linha:
+            if(imcTotal >= 0 && imcTotal <= 18.5){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está abaixo do peso. &#x1F626;  </p>`
+            }
+             // Se o IMC do usuário estiver entre 18,5 e 24,9 execute essa linha:
+            else if (imcTotal > 18.5 && imcTotal <= 24.9){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está no peso ideal (Parabéns). &#x1F604; </p>`
+            }
+            // Se o IMC do usuário estiver entre 25,00 e 29,9 execute essa linha:
+            else if (imcTotal > 24.9 && imcTotal <= 29.9){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está levemente acima do peso. &#x1F615; </p>`
+            }
+             // Se o IMC do usuário estiver entre 30,00 e 34,9 execute essa linha:
+            else if(imcTotal > 29.9 && imcTotal <= 34.9){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está obesidade grau 1. &#128559; </p>`
+            }
+            // Se o IMC do usuário estiver entre 35,00 e 39,9 execute essa linha:
+            else if(imcTotal > 34.9 && imcTotal <= 39.9){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está obesidade grau 2 (severa). &#128559; </p>`
+            }
+             // Se o IMC do usuário for maior que 40,00 execute essa linha:
+            else if(imcTotal >= 40){
+                res.innerHTML = `<p> Seu IMC é de: <strong> ${imcTotal} </strong> - Isso significa que você está obesidade grau 3 (mórbida). &#x1F630; </p>`
+            }
+             // Caso o IMC do usuário não seja nenhum apresentado anteriormente (normalmente costuma ser zero), execute essa linha:
+            else{
+                resultado.innerHTML = `<p> Seu IMC é de: <strong> 0 </strong> - Algo de errado não está certo... &#x1F61C;</p>`
+            }
+        }
+
+    </script>
+<footer>₢ Weslley Nascimento </footer>
+</html>

@@ -1,0 +1,46 @@
+body {
+    background-color: rgb(76, 92, 76);
+    font: normal 18pt arial;
+}
+
+header{
+    width: 450px;
+    color: antiquewhite;
+    font-size: 12pt;
+    margin: auto;
+}
+
+section{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding: 18px;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    box-shadow: 3px 3px 15px;
+}
+
+footer{
+    color: antiquewhite;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+#btn {
+    color: white;
+    font-size: 18pt;
+    border-radius: 6px;
+    background-color: rgb(76, 92, 76);
+}
+#nota{
+    width: 250px;
+    height: 25px;
+    font-size: 15pt;
+    margin-top: 50px;
+}
+#resultado{
+    margin-top: 70px;
+}
+#regras{
+    font-size: 15pt;
+}

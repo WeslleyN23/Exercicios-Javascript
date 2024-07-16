@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width-device-width, initial-scale-1">
+      <link rel="stylesheet" type="text/css" href="ex012.css">
+      <title>Exercício 12</title>
+    </head>
+    <body>
+      <header>
+        <h2>Faça um algoritmo que leia o valor de um produto e determine o valor que deve ser pago, conforme a escolha da forma de pagamento pelo comprador e imprima na tela o valor final do produto a ser pago. Utilize a tabela de condições de pagamento para efetuar o cáculo adequado.
+          Tabela de código de condições de pagamento:
+          A- Avista em dinheiro ou pix, recebe 15% de desconto;
+          B- Avista no cartão de crédito, recebe 10% de desconto;
+          C- Parcelado no cartão em duas vezes, preço normal do produto sem juros;
+          D- Parcelado no cartão em três vezes ou mais, preço normal do produto mais juros de 10%.
+      </h2>
+      </header>
+
+        <section>
+          <p><strong>Insira o valor do produto:</strong></p>
+        <input type="number" name="produto" id="produto" placeholder="Ex: R$455,00">
+          <form>
+            <p><strong>Escolha a forma de pagamento:</strong> </p>
+            <select id="condicao">
+              <option value="1">Avista em dinheiro ou pix</option>
+              <option value="2">Avista no cartão de crédito</option>
+              <option value="3">Parcelado no cartão em duas vezes</option>
+              <option value="4">Parcelado no cartão em três vezes ou mais</option>  
+            </select><br><br><br>
+              <p><input type="button" name="btn" id="btn" value="Confirmar" onclick="confirmar()"></p> 
+              <p id="resultado">O resultado aparecerá aqui!</p>
+          </form>
+        </section><br><br><br>
+
+        
+    
+    <script src="ex012.js"></script>
+  </body>
+</html>
